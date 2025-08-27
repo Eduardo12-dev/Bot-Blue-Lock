@@ -7,6 +7,8 @@ import random
 import json
 import os
 
+TOKEN = os.getenv("DISCORD_TOKEN")
+
 intents = discord.Intents.all()
 bot = commands.Bot(command_prefix="!", intents=intents, case_insensitive=True)
 
@@ -3525,4 +3527,5 @@ async def on_thread_create(thread):
         embed.set_image(url="URL_DA_IMAGEM")
         await thread.send(embed=embed)
 
-bot.run("MTM4MzQ5NzQ0NTgyMDA3NjEzNA.G2-BM8.fEmrh0FDD5iVYNNgvmqJ67uIgtqN_g4WCpRzng")  # Não compartilhe tokens publicamente! -
+
+bot.run(TOKEN)
